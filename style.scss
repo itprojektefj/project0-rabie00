@@ -1,0 +1,92 @@
+/*
+Theme Name:HTML5 ;
+Date: Mai 2019   ; 
+Discription: Learn Basic HTML5;
+Author: Rabia Almotlik;
+*/
+
+//Variable
+$my-border-radius: 5px;
+
+//template
+%browser-specific-radius {
+  -webkit-border-radius: $my-border-radius;
+  -moz-border-radius: $my-border-radius;
+}
+
+body{
+	background-image: url('images/bodybackground.jpg');
+	color: #000305;
+	font-size: 95%;
+	font-family: Arial,'Lucida Sans Unicode';
+	line-height: 1,5;
+	text-align: left;
+}
+a{text-decoration: none;}
+
+.body{
+	margin: 10px auto;
+	width: 80%;
+	clear: both;
+}
+/* -------------------- Main Header -------------------------*/
+
+.mainheader img {
+	width: 100%;
+}
+
+.mainheader nav {
+	background-color: #e74c3c ;
+	height: 50px ;
+	@extend %browser-specific-radius;
+}
+
+.mainheader { 
+    nav { 
+       ul {
+	      list-style: none;
+	      margin: 0 auto ;
+	}
+  }
+}
+
+.mainheader nav ul li {
+	color: white;
+	display: inline-block;
+	padding: 10px 
+}
+/* -------------------- Main Content -------------------------*/
+.maincontent{
+	width: 70%;
+	float: left;
+}
+
+#top-content{
+	background-color: #fff;
+	padding: 3%;
+	margin-top: 3%;
+	@extend %browser-specific-radius;
+}
+
+/* -------------------- Footer -------------------------*/
+
+.footer{
+	margin-top: 20px;
+
+	float: left;
+	width: 100%;
+	background-color: #e74c3c ;
+	height: 40px ;
+	@extend %browser-specific-radius;
+}
+
+.footer p{
+	text-align: center;
+	color: black;
+	width: 90%;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
